@@ -1,6 +1,6 @@
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.1.1-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
