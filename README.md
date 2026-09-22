@@ -1,6 +1,6 @@
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
@@ -88,6 +88,8 @@
   * **Reduce Flashstep Cooldown**: Slider to decrease the cooldown time between Flashsteps.
 * **Water Walking**:
   * **Solid Water Surface**: Solidifies water surfaces, allowing you to walk, run, and jump over water without sinking or taking sea damage.
+* **Anti Lava**:
+  * **Lava Remove**: No longger lava dmg (passive)
 * **Faction Switcher**:
   * **Switch Team: Pirates**: One-click button to switch to the Pirates faction.
   * **Switch Team: Marines**: One-click button to switch to the Marines faction.
@@ -142,11 +144,7 @@ getgenv()["BFP_AutoTeam"] = "Pirates"
 Execute the following script in your executor:
 
 ```lua
---[=[
-    Optional auto-team configuration (uncomment to enable):
-    getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "Marines"
---]=]
-
+getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "P" or "Marines" or "M"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/HashimotoAkira-BloxFruitPvpHub/main/BloxFruitPvpLoader"))()
 ```
 
