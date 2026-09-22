@@ -89,7 +89,7 @@
 * **Water Walking**:
   * **Solid Water Surface**: Solidifies water surfaces, allowing you to walk, run, and jump over water without sinking or taking sea damage.
 * **Anti Lava**:
-  * **Lava Remove**: No longger lava dmg (passive)
+  * **Lava Remove**: No longger lava damage (passive).
 * **Faction Switcher**:
   * **Switch Team: Pirates**: One-click button to switch to the Pirates faction.
   * **Switch Team: Marines**: One-click button to switch to the Marines faction.
@@ -109,7 +109,7 @@
 * Real-time statistics display:
   * **Script Uptime**: Total runtime of the script session.
   * **Game Uptime**: Total uptime of the current game server.
-  * **Memory Usage (Lua)**: RAM consumed by the script environment (MB).
+  * **Memory Usage (Lua\luau)**: RAM consumed by the script environment (MB).
   * **Frames Per Second (FPS)**: Live FPS counter.
   * **Ping**: Current network latency to the server (ms).
 
