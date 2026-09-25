@@ -1,13 +1,13 @@
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.1.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
 
 ## 📖 Introduction
 
-**Blox Fruits Combat Hub - Pro Edition** is a comprehensive enhancement suite for Blox Fruits, delivering combat assistance, advanced mobility, visual ESP, and player utilities wrapped in a sleek, customizable user interface. It features real-time performance diagnostics and an integrated configuration manager.
+**Blox Fruits Combat Hub - Pro Edition** is a comprehensive enhancement suite for Blox Fruits, delivering combat assistance, advanced mobility, visual ESP, server hopping tools, and player utilities wrapped in a sleek, customizable user interface. It features real-time performance diagnostics and an integrated configuration manager.
 
 ---
 
@@ -87,16 +87,30 @@
   * **Air Flashstep Cursor Aim**: Teleports towards sky/air coordinates based on cursor location.
   * **Reduce Flashstep Cooldown**: Slider to decrease the cooldown time between Flashsteps.
 * **Water Walking**:
-  * **Solid Water Surface**: Solidifies water surfaces, allowing you to walk, run, and jump over water without sinking or taking sea damage.
-* **Anti Lava**:
-  * **Lava Remove**: No longger lava damage (passive).
+  * **Solid Water Surface**: Solidifies water surfaces with dynamic height scanning and anti-sink recovery logic, allowing you to walk, run, and jump over water without sinking or taking sea damage.
+* **Anti-Lava (Fixed & Optimized)**:
+  * Targeted removal and collision neutralization for lava parts across Sea 1 (`Magma`) and Sea 2 (`CircleIsland`, `GhostShipInterior`), eliminating damage without false positives on other map structures.
 * **Faction Switcher**:
   * **Switch Team: Pirates**: One-click button to switch to the Pirates faction.
   * **Switch Team: Marines**: One-click button to switch to the Marines faction.
 
 ---
 
-### 4. ✨ Fruit VFX Customization
+### 4. 🌐 Server Browser & Quick Travel
+* **Integrated Server Browser Overhaul**:
+  * Replaces default server browser with an optimized version combining Roblox Web API queries and game remotes.
+  * **Live Accurate Data**: Displays exact player count cross-referenced against Roblox servers, server regions, and total server bounty.
+  * **Sorting Controls**: Sort list dynamically by **Players: Low / High** or **Bounty: High / Low**.
+  * **Filtering**: Filter servers by Region name, Server alias, minimum bounty threshold, or hide full servers.
+* **Direct World & Dungeon Teleportation**:
+  * Dedicated travel buttons for **Sea 1 (TravelMain)**, **Sea 2 (Dressrosa)**, **Sea 3 (Zou)**, and **Dungeon Hub**.
+  * **Quest & Requirement Verification**: Automatically queries server progression and highlights buttons when requirements are satisfied (e.g., Detective/Ice Boss quest for Sea 2, Zou quest for Sea 3, Level 1100+ for Dungeons).
+  * **Safety Controls**: Double-click confirmation prompt (`Confirm?`) to prevent accidental teleports, with automatic checks preventing teleportation while in combat.
+  * **Device Adaptation**: Automatically adapts UI layout for mobile phone screens.
+
+---
+
+### 5. ✨ Fruit VFX Customization
 * **Visual Style Mode**: Customizes the color appearance of fruit ability visual effects:
   * **Rainbow**: Dynamic cycling across the full color spectrum.
   * **Custom Transition**: Smooth gradient transition between two custom colors.
@@ -105,20 +119,21 @@
 
 ---
 
-### 5. 📊 Performance Monitor
+### 6. 📊 Performance Monitor
 * Real-time statistics display:
   * **Script Uptime**: Total runtime of the script session.
   * **Game Uptime**: Total uptime of the current game server.
-  * **Memory Usage (Lua\luau)**: RAM consumed by the script environment (MB).
+  * **Memory Usage (Lua/Luau)**: RAM consumed by the script environment (MB).
   * **Frames Per Second (FPS)**: Live FPS counter.
   * **Ping**: Current network latency to the server (ms).
 
 ---
 
-### 6. ⚙️ Settings & Utilities
-* **Protection**:
-  * **Anti-Kick Protection**: Blocks client-side disconnect and kick attempts.
-  * **Anti-AFK Keep Alive**: Prevents being disconnected for 20-minute idle inactivity.
+### 7. ⚙️ Settings & Utilities
+* **Protection & Anti-Crash**:
+  * **Anti-Kick Protection**: Blocks client-side disconnect and kick attempts via hooked metatable.
+  * **Anti-AFK Keep Alive**: Prevents idle disconnections after 20 minutes of inactivity.
+  * **Server Hop Crash Prevention**: Automatically cleans up threads, hook buses, and UI instances on `OnTeleport` to prevent executor crashes.
 * **Config Manager**:
   * Create, save, load, and delete custom setting profiles.
   * **Autoload Config**: Automatically applies your preferred settings upon script execution.
@@ -126,7 +141,7 @@
   * **Open Dex Explorer**: Launches the Dex game explorer.
   * **Open Infinite Yield**: Launches the Infinite Yield administration command suite.
 * **Lifecycle**:
-  * **Completely Unload Script**: Safely unbinds all listeners, clears UI elements, and restores original game settings.
+  * **Completely Unload Script**: Safely unbinds all listeners, clears UI elements, and restores original game metatables.
 
 ---
 
