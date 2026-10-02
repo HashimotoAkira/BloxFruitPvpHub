@@ -115,8 +115,6 @@
   * **Filtering**: Filter servers by Region name, Server alias, minimum bounty threshold, or hide full servers.
 * **Direct World & Dungeon Teleportation**:
   * Dedicated travel buttons for **Sea 1 (TravelMain)**, **Sea 2 (Dressrosa)**, **Sea 3 (Zou)**, and **Dungeon Hub**.
-  * **Quest & Requirement Verification**: Automatically queries server progression and highlights buttons when requirements are satisfied (e.g., Detective/Ice Boss quest for Sea 2, Zou quest for Sea 3, Level 1100+ for Dungeons).
-  * **Safety Controls**: Double-click confirmation prompt (`Confirm?`) to prevent accidental teleports, with automatic checks preventing teleportation while in combat.
   * **Device Adaptation**: Automatically adapts UI layout for mobile phone screens.
 
 ---
