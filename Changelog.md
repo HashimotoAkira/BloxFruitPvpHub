@@ -1,9 +1,11 @@
 # Changelog
+### [v2.3.0]
 
+### [Add - v2.3.0]
+- **Ken Haki Mod**: Added Observation (Ken) Haki Mod (`AddKenMod`).
+- **DrawAPI**: Added DrawAPI support for ESP and visual rendering (`DrawAPI`).
+- **Server Browser**: Integrated an advanced custom Server Browser (`ServerBrowser`).
 
-### [Improvements & Fixes - v2.2.1]
-- **Entity Tracker:** Implemented a robust hash-map `EntityTracker` module for high-performance entity and player monitoring.
-- **ESP System & Silent Aim:** Decoupled the ESP rendering pipeline from targeting logic, ensuring stable and independent Silent Aim functionality.
-- **Anti-Lava:** Added strict, safe neutralization for dangerous lava parts across map zones, including Prehistoric Island.
-- **Server Browser:** Optimized server list fetching with batch-processing requests to prevent rate-limiting (`HTTP 429`).
-- **Water Platform:** Optimized the `ManageWaterWalking` system using a persistent memory cache (`memoryWaterCache`) to significantly reduce lag and maintain smooth performance.
+### [Improvements & Fixes -v2.3.0]
+- **UI Tabs Refactor**: Completely refactored and reorganized the UI tabs for a cleaner user experience (`RefactorTabs`).
+- **HookManager**: Improved and optimized the HookManager system for better stability and bypass handling (`HookManager`).
