@@ -1,6 +1,9 @@
+
+---
+
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.2.1-blue.svg)
+![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
@@ -44,7 +47,30 @@
 
 ---
 
-### 2. 👁️ Visuals (ESP)
+### 2. 🏃 Movement & Mobility
+* **Speed Buffs**:
+  * **Speed Multiplier**: Multiplies character running speed (1x to 10x).
+* **Fruit Flight**:
+  * **Fly Speed Mod**: Increases movement speed while flying with fruit abilities (1x to 5x).
+* **Custom Dash**:
+  * **Custom Dash Engine**: Optimizes dash responsiveness and reduces stamina consumption.
+  * **Dash Length Buff**: Increases dash travel distance (1 to 100 studs).
+* **Jump & Geppo (Skyjump)**:
+  * **Custom Geppo Engine**: Upgraded multi-stage jump mechanics.
+  * **Infinite SkyJump Charges**: Unlimited Geppo jumps without running out of charges.
+  * **Infinite Space Jump**: Jump repeatedly in mid-air by holding the space bar.
+  * **Custom Jump Power**: Slider to adjust jump height (50 to 300).
+* **Custom Flashstep (Soru)**:
+  * **Modded Flashstep**: Increases teleport distance, automatically targets locked enemies, and remains usable while stunned.
+  * **Air Flashstep Cursor Aim**: Teleports towards sky/air coordinates based on cursor location.
+  * **Reduce Flashstep Cooldown**: Slider to decrease the cooldown time between Flashsteps.
+* **Environment Traversal**:
+  * **Water Walking**: Solidifies water surfaces with dynamic height scanning and anti-sink recovery logic, allowing you to walk, run, and jump over water without taking sea damage.
+  * **Boat Speed Mod [BETA]**: Increase the movement speed of driven boats with a customizable multiplier.
+
+---
+
+### 3. 👁️ Visuals (ESP)
 * **Master ESP Controls**:
   * Toggle ESP overlays across the game world.
   * Independent toggles for **Players** (`Render Players`) and **Monsters** (`Render Monsters`).
@@ -65,29 +91,14 @@
 
 ---
 
-### 3. 🏃 Player & Mobility
-* **Attack & Speed Buffs**:
+### 4. 👤 Player & Faction
+* **Attack Buffs**:
   * **Loop Attack Speed Multiplier**: Toggle and slider to boost basic attack / sword swing speed (1x to 5x).
   * **Gun Shoot Speed**: Slider to increase gun firing speed (1x to 5x).
-  * **Speed Multiplier**: Multiplies character running speed (1x to 10x).
   * **Unbreakable Super Armor**: Prevents skill animations and charge-ups from being interrupted when taking damage.
   * **Anti-Stun Engine**: Minimizes crowd control effects, allowing movement, gun fire (M1), and neutralizing enemy pull/drag forces.
-* **Fruit Flight**:
-  * **Fly Speed Mod**: Increases movement speed while flying with fruit abilities (1x to 5x).
-* **Custom Dash**:
-  * **Custom Dash Engine**: Optimizes dash responsiveness and reduces stamina consumption.
-  * **Dash Length Buff**: Increases dash travel distance (1 to 100 studs).
-* **Jump & Geppo (Skyjump)**:
-  * **Custom Geppo Engine**: Upgraded multi-stage jump mechanics.
-  * **Infinite SkyJump Charges**: Unlimited Geppo jumps without running out of charges.
-  * **Infinite Space Jump**: Jump repeatedly in mid-air by holding the space bar.
-  * **Custom Jump Power**: Slider to adjust jump height (50 to 300).
-* **Custom Flashstep (Soru)**:
-  * **Modded Flashstep**: Increases teleport distance, automatically targets locked enemies, and remains usable while stunned.
-  * **Air Flashstep Cursor Aim**: Teleports towards sky/air coordinates based on cursor location.
-  * **Reduce Flashstep Cooldown**: Slider to decrease the cooldown time between Flashsteps.
-* **Water Walking**:
-  * **Solid Water Surface**: Solidifies water surfaces with dynamic height scanning and anti-sink recovery logic, allowing you to walk, run, and jump over water without sinking or taking sea damage.
+* **Haki & Senses**:
+  * **Observation (Ken) Haki Mod [BETA]**: Features fast active and auto-reactive Observation Haki capabilities when Ken breaks. 
 * **Anti-Lava (Fixed & Optimized)**:
   * Targeted removal and collision neutralization for lava parts across Sea 1 (`Magma`) and Sea 2 (`CircleIsland`, `GhostShipInterior`), eliminating damage without false positives on other map structures.
 * **Faction Switcher**:
@@ -96,7 +107,7 @@
 
 ---
 
-### 4. 🌐 Server Browser & Quick Travel
+### 5. 🌐 Server Browser & Quick Travel
 * **Integrated Server Browser Overhaul**:
   * Replaces default server browser with an optimized version combining Roblox Web API queries and game remotes.
   * **Live Accurate Data**: Displays exact player count cross-referenced against Roblox servers, server regions, and total server bounty.
@@ -110,7 +121,7 @@
 
 ---
 
-### 5. ✨ Fruit VFX Customization
+### 6. ✨ Fruit VFX Customization
 * **Visual Style Mode**: Customizes the color appearance of fruit ability visual effects:
   * **Rainbow**: Dynamic cycling across the full color spectrum.
   * **Custom Transition**: Smooth gradient transition between two custom colors.
@@ -119,7 +130,7 @@
 
 ---
 
-### 6. 📊 Performance Monitor
+### 7. 📊 Performance Monitor
 * Real-time statistics display:
   * **Script Uptime**: Total runtime of the script session.
   * **Game Uptime**: Total uptime of the current game server.
@@ -129,7 +140,7 @@
 
 ---
 
-### 7. ⚙️ Settings & Utilities
+### 8. ⚙️ Settings & Utilities
 * **Protection & Anti-Crash**:
   * **Anti-Kick Protection**: Blocks client-side disconnect and kick attempts via hooked metatable.
   * **Anti-AFK Keep Alive**: Prevents idle disconnections after 20 minutes of inactivity.
