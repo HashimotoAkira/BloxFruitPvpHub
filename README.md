@@ -3,7 +3,7 @@
 
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
@@ -73,7 +73,7 @@
 ### 3. 👁️ Visuals (ESP)
 * **Master ESP Controls**:
   * Toggle ESP overlays across the game world.
-  * Independent toggles for **Players** (`Render Players`) and **Monsters** (`Render Monsters`).
+  * Independent toggles for **Players** (`Render Players`),**Monsters** (`Render Monsters`), **Boat Sea Event**** (`Render Monsters`) and **Sea Beasts & Leviathan** (`Render Sea Beasts & Leviathan`).
   * **Render Allies & Shadows**: Highlights allies and shadow entities with distinctive green coloring.
 * **Information Tags**:
   * **Display Distance**: Shows distance to the target in meters/studs.
