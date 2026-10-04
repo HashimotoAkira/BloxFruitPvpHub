@@ -1,11 +1,8 @@
 # Changelog
-### [v2.3.0]
+### [v2.4.0]
 
-### [Add - v2.3.0]
-- **Ken Haki Mod**: Added Observation (Ken) Haki Mod (`AddKenMod`).
-- **DrawAPI**: Added DrawAPI support for ESP and visual rendering (`DrawAPI`).
-- **Server Browser**: Integrated an advanced custom Server Browser (`ServerBrowser`).
+### [Add - v2.4.0]
+- **Aim System**: Added Sea event target: Boat, SeaBeast.
 
-### [Improvements & Fixes -v2.3.0]
-- **UI Tabs Refactor**: Completely refactored and reorganized the UI tabs for a cleaner user experience (`RefactorTabs`).
-- **HookManager**: Improved and optimized the HookManager system for better stability and bypass handling (`HookManager`).
+### [Improvements & Fixes -v2.4.0]
+- **No Fog**: Fix the bug cant remove fullfuly.
