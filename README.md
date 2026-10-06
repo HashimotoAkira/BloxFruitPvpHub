@@ -3,178 +3,101 @@
 
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
 
-## 📖 Introduction
+## Overview
 
-**Blox Fruits Combat Hub - Pro Edition** is a comprehensive enhancement suite for Blox Fruits, delivering combat assistance, advanced mobility, visual ESP, server hopping tools, and player utilities wrapped in a sleek, customizable user interface. It features real-time performance diagnostics and an integrated configuration manager.
+Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. The latest build focuses on cleaner entity detection, better sea-event targeting, and improved map-visual control.
+
+This project is maintained as a compact, modular script bundle with a dedicated UI and a configuration system. The latest version in the source tree is `v2.5.0`.
 
 ---
 
-## ⌨️ Hotkeys & Quick Controls
+## Key Controls
 
-| Input / Key | Feature | Description |
+| Key | Action | Description |
 | :--- | :--- | :--- |
-| **`K`** | **Toggle UI Menu** | Show or hide the main interface window. |
-| **`G`** | **Master Combat Hotkey** | Instantly toggle the combat and targeting system. Includes a cursor indicator dot (Green = Active, Red = Inactive). |
-| **Hold Right Mouse Button (`M2`)** | **Camera Aimbot** | Smoothly locks and tracks the camera onto the active target. |
+| `K` | Toggle UI | Opens or hides the main interface. |
+| `G` | Combat toggle | Enables or disables the active combat/aiming system. |
+| `B` | Aim Lock | Pins the current target so it stays locked while fighting. |
+| Right Mouse (`M2`) | Camera aim | Smoothly tracks the current target with camera aimbot behavior. |
 
 ---
 
-## 🌟 Features Overview
+## Main Features
 
-### 1. ⚔️ Combat
-* **Aura Hit (Manual M1)**: Automatically extends melee attack reach during standard attacks (M1).
-* **Master Combat Hotkey**: Global toggle key for all targeting and combat features (Default: `G`).
-* **Silent Aim**: Automatically directs attacks and skill projectiles to the target within your aim radius without turning or shaking your camera.
-* **Camera Aimbot**:
-  * Option to lock the camera directly onto targets when holding Right Mouse Button (`M2`).
-  * **Camera Smoothness**: Slider to calibrate camera tracking smoothness (1 to 20).
-* **FOV Configuration (Field of View)**:
-  * **Show FOV Circle**: Toggle visual display of the targeting circle centered on your cursor.
-  * **FOV Radius**: Slider to adjust the targeting area size (10 to 1000).
-* **Target Filters & Priority**:
-  * **Target: Players**: Toggle targeting of other players (automatically skips crew and party allies).
-  * **Target: Monsters**: Toggle targeting of NPCs and monsters.
-  * **Prioritize Monsters**: Prioritizes NPCs over players when both are present.
-  * **Prioritize Lowest Health**: Prioritizes targets with the lowest remaining HP.
-  * **Prioritize Distance to Character**: Calculates closest target relative to your character's position rather than the cursor.
-  * **Max Aim Distance**: Maximum 3D engagement range slider (100 to 6000 studs).
-  * *Targeting Priority Hierarchy:* Level Bracket -> Entity Category -> Lowest Health -> Distance.
+### Combat
+- Silent Aim and camera aim support for players, monsters, and sea-event targets.
+- FOV circle, target filter controls, and priority settings.
+- Target selection by low health, monster priority, and distance-to-character logic.
+- Supports special sea targets including boats and sea beasts/leviathans.
+- Aim lock key and configurable max aim distance.
 
----
+### Movement & Mobility
+- Speed modifiers and flight speed control.
+- Dash and flashstep enhancements.
+- Jump and geppo/skyjump improvements.
+- Infinite jump and custom jump power options.
+- Water walking support and boat speed utility placeholders.
 
-### 2. 🏃 Movement & Mobility
-* **Speed Buffs**:
-  * **Speed Multiplier**: Multiplies character running speed (1x to 10x).
-* **Fruit Flight**:
-  * **Fly Speed Mod**: Increases movement speed while flying with fruit abilities (1x to 5x).
-* **Custom Dash**:
-  * **Custom Dash Engine**: Optimizes dash responsiveness and reduces stamina consumption.
-  * **Dash Length Buff**: Increases dash travel distance (1 to 100 studs).
-* **Jump & Geppo (Skyjump)**:
-  * **Custom Geppo Engine**: Upgraded multi-stage jump mechanics.
-  * **Infinite SkyJump Charges**: Unlimited Geppo jumps without running out of charges.
-  * **Infinite Space Jump**: Jump repeatedly in mid-air by holding the space bar.
-  * **Custom Jump Power**: Slider to adjust jump height (50 to 300).
-* **Custom Flashstep (Soru)**:
-  * **Modded Flashstep**: Increases teleport distance, automatically targets locked enemies, and remains usable while stunned.
-  * **Air Flashstep Cursor Aim**: Teleports towards sky/air coordinates based on cursor location.
-  * **Reduce Flashstep Cooldown**: Slider to decrease the cooldown time between Flashsteps.
-* **Environment Traversal**:
-  * **Water Walking**: Solidifies water surfaces with dynamic height scanning and anti-sink recovery logic, allowing you to walk, run, and jump over water without taking sea damage.
-  * **Boat Speed Mod [BETA]**: Increase the movement speed of driven boats with a customizable multiplier.
+### Visuals / ESP
+- Player, monster, and sea-beast rendering toggles.
+- Distance, level, display-name, tracer, and box options.
+- Clear map fog and visual shake cleanup.
+- Customizable tracer origin and range.
+- Infinite zoom support.
+
+### Player Utilities
+- Attack speed boosts and gun fire speed modifications.
+- Anti-stun and unbreakable armor behavior.
+- Observation Haki-related features and safe utility hooks.
+- Faction switching and combat quality-of-life automation.
+
+### World / Server Tools
+- Server browser style list with sorting and filtering.
+- Quick travel and world hopping helpers.
+- Compatible layout for desktop and mobile UI contexts.
+
+### Performance & Safety
+- Real-time script/game uptime, FPS, ping, and memory monitoring.
+- Anti-kick and anti-AFK protective logic.
+- Configuration save/load flow with UI-based management.
+- Cleanup and teardown routines to reduce executor instability on teleport or shutdown.
 
 ---
 
-### 3. 👁️ Visuals (ESP)
-* **Master ESP Controls**:
-  * Toggle ESP overlays across the game world.
-  * Independent toggles for **Players** (`Render Players`),**Monsters** (`Render Monsters`), **Boat Sea Event**** (`Render Monsters`) and **Sea Beasts & Leviathan** (`Render Sea Beasts & Leviathan`).
-  * **Render Allies & Shadows**: Highlights allies and shadow entities with distinctive green coloring.
-* **Information Tags**:
-  * **Display Distance**: Shows distance to the target in meters/studs.
-  * **Display Level**: Displays the target's current level.
-  * **Display DisplayName**: Displays display names instead of usernames.
-  * **Truncate Long Names**: Automatically shortens lengthy names for a cleaner display.
-  * **Ken Haki Status**: Displays Observation Haki status and remaining dodges.
-* **Tracers**:
-  * Draws visual tracer lines from your screen to targets.
-  * **Tracer Origin**: Select line starting position (`Bottom` of screen, `Mouse` cursor, or `Center` of screen).
-  * **Tracer Range**: Maximum distance limit slider for drawing tracer lines (100 to 6000 studs).
-* **Environment Enhancements**:
-  * **Infinite Camera Zoom**: Removes camera zoom limits for unrestricted zoom-out distance.
-  * **Clear Map Fog & Visual Shakes**: One-click button to clear all ocean/map fog and remove camera shaking effects.
+## Latest Update Summary (v2.5.0)
+
+Compared with the backup version, the latest script includes:
+
+- Expanded sea target detection for `Boat` and `SeaBeast`/`Leviathan` entities.
+- Improved aim and ESP classification for sea-event mobs and boat-like enemies.
+- Stabilized map fog removal, including a fix for the issue where fog could not be cleared completely.
+- Better entity tracking and filtering logic for combat and visuals.
+- Continued optimization around performance, targeting, and script safety.
 
 ---
 
-### 4. 👤 Player & Faction
-* **Attack Buffs**:
-  * **Loop Attack Speed Multiplier**: Toggle and slider to boost basic attack / sword swing speed (1x to 5x).
-  * **Gun Shoot Speed**: Slider to increase gun firing speed (1x to 5x).
-  * **Unbreakable Super Armor**: Prevents skill animations and charge-ups from being interrupted when taking damage.
-  * **Anti-Stun Engine**: Minimizes crowd control effects, allowing movement, gun fire (M1), and neutralizing enemy pull/drag forces.
-* **Haki & Senses**:
-  * **Observation (Ken) Haki Mod [BETA]**: Features fast active and auto-reactive Observation Haki capabilities when Ken breaks. 
-* **Anti-Lava (Fixed & Optimized)**:
-  * Targeted removal and collision neutralization for lava parts across Sea 1 (`Magma`) and Sea 2 (`CircleIsland`, `GhostShipInterior`), eliminating damage without false positives on other map structures.
-* **Faction Switcher**:
-  * **Switch Team: Pirates**: One-click button to switch to the Pirates faction.
-  * **Switch Team: Marines**: One-click button to switch to the Marines faction.
+## Getting Started
 
----
+1. Open a Roblox executor that supports Luau or script injection.
+2. Load the latest script from `src/BFP.luau` or the project loader you use for this hub.
+3. Open the UI with the configured keybind (`K` by default).
+4. Enable the desired features from the tabs and tune them to your preference.
 
-### 5. 🌐 Server Browser & Quick Travel
-* **Integrated Server Browser Overhaul**:
-  * Replaces default server browser with an optimized version combining Roblox Web API queries and game remotes.
-  * **Live Accurate Data**: Displays exact player count cross-referenced against Roblox servers, server regions, and total server bounty.
-  * **Sorting Controls**: Sort list dynamically by **Players: Low / High** or **Bounty: High / Low**.
-  * **Filtering**: Filter servers by Region name, Server alias, minimum bounty threshold, or hide full servers.
-* **Direct World & Dungeon Teleportation**:
-  * Dedicated travel buttons for **Sea 1 (TravelMain)**, **Sea 2 (Dressrosa)**, **Sea 3 (Zou)**, and **Dungeon Hub**.
-  * **Device Adaptation**: Automatically adapts UI layout for mobile phone screens.
-
----
-
-### 6. ✨ Fruit VFX Customization
-* **Visual Style Mode**: Customizes the color appearance of fruit ability visual effects:
-  * **Rainbow**: Dynamic cycling across the full color spectrum.
-  * **Custom Transition**: Smooth gradient transition between two custom colors.
-  * **Static Presets**: Solid color choices including `Red`, `Blue Moonlight`, `Purple-pink`, `Lotus Pink`, `White`, and `Black`.
-* **Custom Color Gradient**: Dual color pickers (`Color 1` and `Color 2`) for creating personalized color transitions.
-
----
-
-### 7. 📊 Performance Monitor
-* Real-time statistics display:
-  * **Script Uptime**: Total runtime of the script session.
-  * **Game Uptime**: Total uptime of the current game server.
-  * **Memory Usage (Lua/Luau)**: RAM consumed by the script environment (MB).
-  * **Frames Per Second (FPS)**: Live FPS counter.
-  * **Ping**: Current network latency to the server (ms).
-
----
-
-### 8. ⚙️ Settings & Utilities
-* **Protection & Anti-Crash**:
-  * **Anti-Kick Protection**: Blocks client-side disconnect and kick attempts via hooked metatable.
-  * **Anti-AFK Keep Alive**: Prevents idle disconnections after 20 minutes of inactivity.
-  * **Server Hop Crash Prevention**: Automatically cleans up threads, hook buses, and UI instances on `OnTeleport` to prevent executor crashes.
-* **Config Manager**:
-  * Create, save, load, and delete custom setting profiles.
-  * **Autoload Config**: Automatically applies your preferred settings upon script execution.
-* **External Utilities**:
-  * **Open Dex Explorer**: Launches the Dex game explorer.
-  * **Open Infinite Yield**: Launches the Infinite Yield administration command suite.
-* **Lifecycle**:
-  * **Completely Unload Script**: Safely unbinds all listeners, clears UI elements, and restores original game metatables.
-
----
-
-## 🚀 How to Use
-
-### 1. Auto Team Selection (Optional)
-To automatically join a faction upon entering the game, set the environment variable prior to executing the loader:
+Example generic execution pattern:
 
 ```lua
--- Options: "Pirates" (or "P") / "Marines" (or "M")
-getgenv()["BFP_AutoTeam"] = "Pirates"
+loadstring(readfile("BFP.luau"))()
 ```
 
-### 2. Loader Script
-Execute the following script in your executor:
-
-```lua
-getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "P" or "Marines" or "M"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/HashimotoAkira-BloxFruitPvpHub/main/BloxFruitPvpLoader"))()
-```
-
-> **Note:** For optimal stability, execute the script manually after fully loading into the game rather than placing it in Auto Execute.
+> Use the script only in a supported environment and on accounts you are allowed to play.
 
 ---
 
-## ⚠️ Disclaimer
-Please use this script responsibly. The developers are not liable for any account restrictions or consequences resulting from its usage.
+## Disclaimer
+
+This project is intended for educational and personal customization use. The author is not responsible for account penalties, executor issues, or misuse of automation tools in Roblox.
