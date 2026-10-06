@@ -84,14 +84,14 @@ Compared with the backup version, the latest script includes:
 ## Getting Started
 
 1. Open a Roblox executor that supports Luau or script injection.
-2. Load the latest script from `src/BFP.luau` or the project loader you use for this hub.
-3. Open the UI with the configured keybind (`K` by default).
-4. Enable the desired features from the tabs and tune them to your preference.
+2. Open the UI with the configured keybind (`K` by default).
+3. Enable the desired features from the tabs and tune them to your preference.
 
 Example generic execution pattern:
 
 ```lua
-loadstring(readfile("BFP.luau"))()
+getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "P" or "Marines" or "M"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/BloxFruitPvpHub/main/BloxFruitPvpLoader"))()
 ```
 
 > Use the script only in a supported environment and on accounts you are allowed to play.
