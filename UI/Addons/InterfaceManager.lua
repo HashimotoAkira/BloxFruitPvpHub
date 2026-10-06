@@ -1,3 +1,4 @@
+--version: 1.0.0
 local httpService = game:GetService("HttpService")
 
 local InterfaceManager = {} do
