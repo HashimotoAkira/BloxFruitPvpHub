@@ -3,16 +3,16 @@
 
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
 
 ## Overview
 
-Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. The latest build focuses on cleaner entity detection, better sea-event targeting, and improved map-visual control.
+Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. Version 2.6.0 focuses on broader movement controls, flexible ESP rendering, runtime monitoring, and more complete resource cleanup.
 
-This project is maintained as a compact, modular script bundle with a dedicated UI and a configuration system. The latest version in the source tree is `v2.5.0`.
+This project is maintained as a modular Luau script with a dedicated UI, entity tracking, and a configuration system. The latest version in the source tree is `v2.6.0`.
 
 ---
 
@@ -30,22 +30,23 @@ This project is maintained as a compact, modular script bundle with a dedicated 
 ## Main Features
 
 ### Combat
-- Silent Aim and camera aim support for players, monsters, and sea-event targets.
+- Silent Aim and camera aim support for players, monsters, and supported sea-event targets.
 - FOV circle, target filter controls, and priority settings.
 - Target selection by low health, monster priority, and distance-to-character logic.
-- Supports special sea targets including boats and sea beasts/leviathans.
+- Tracks players, monsters, boats, and sea beasts/Leviathans for targeting and ESP.
 - Aim lock key and configurable max aim distance.
 
 ### Movement & Mobility
-- Speed modifiers and flight speed control.
-- Dash and flashstep enhancements.
-- Jump and geppo/skyjump improvements.
+- Configurable speed and flight modifiers with a maximum flight-speed cap.
+- M1/skill rush movement modifiers.
+- Custom dash, flashstep, and Geppo/sky-jump controls.
 - Infinite jump and custom jump power options.
-- Water walking support and boat speed utility placeholders.
+- Transformation-aware movement adjustments and water walking.
 
 ### Visuals / ESP
-- Player, monster, and sea-beast rendering toggles.
-- Distance, level, display-name, tracer, and box options.
+- Selectable Drawing API or ScreenGui rendering backends, with pooled ESP objects.
+- Player, monster, ally/shadow, and sea-beast rendering options.
+- Distance, level, display-name, tracer, box, and target-indicator options.
 - Clear map fog and visual shake cleanup.
 - Customizable tracer origin and range.
 - Infinite zoom support.
@@ -57,27 +58,24 @@ This project is maintained as a compact, modular script bundle with a dedicated 
 - Faction switching and combat quality-of-life automation.
 
 ### World / Server Tools
-- Server browser style list with sorting and filtering.
-- Quick travel and world hopping helpers.
-- Compatible layout for desktop and mobile UI contexts.
+- Server browser enhancements with player/bounty sorting, bounty filtering, refresh, and travel controls.
+- Auto team selection and manual faction switching.
+- Layout support for desktop and mobile UI contexts.
 
 ### Performance & Safety
-- Real-time script/game uptime, FPS, ping, and memory monitoring.
+- Live script/game uptime, FPS, ping, and memory monitoring.
 - Anti-kick and anti-AFK protective logic.
 - Configuration save/load flow with UI-based management.
-- Cleanup and teardown routines to reduce executor instability on teleport or shutdown.
+- Centralized cleanup for hooks, tasks, connections, entity tracking, and render pools.
+- Optional executor API lookup with environment fallbacks; unsupported APIs are not emulated.
 
----
+## Latest Update Summary (v2.6.0)
 
-## Latest Update Summary (v2.5.0)
-
-Compared with the backup version, the latest script includes:
-
-- Expanded sea target detection for `Boat` and `SeaBeast`/`Leviathan` entities.
-- Improved aim and ESP classification for sea-event mobs and boat-like enemies.
-- Stabilized map fog removal, including a fix for the issue where fog could not be cleared completely.
-- Better entity tracking and filtering logic for combat and visuals.
-- Continued optimization around performance, targeting, and script safety.
+- Expanded the modular entity-tracking flow for players, monsters, boats, and sea beasts.
+- Added more configurable movement controls, including M1/skill rush modifiers and separate dash, flashstep, and Geppo options.
+- Improved ESP backend selection and object reuse for Drawing API and ScreenGui rendering.
+- Added live runtime monitoring and expanded server-browser sorting, filtering, and travel handling.
+- Strengthened lifecycle cleanup for hooks, tasks, connections, and render resources.
 
 ---
 
@@ -86,6 +84,16 @@ Compared with the backup version, the latest script includes:
 1. Open a Roblox executor that supports Luau or script injection.
 2. Open the UI with the configured keybind (`K` by default).
 3. Enable the desired features from the tabs and tune them to your preference.
+
+### Executor API lookup
+
+`src/core/Executor.luau` resolves optional APIs from `getgenv()` first, then
+the current script environment and `getrenv()`. It only discovers APIs supplied
+by the executor; it does not emulate them. For example, `gethui` is optional
+and the ESP UI falls back to `CoreGui` or `PlayerGui` when it is unavailable.
+
+The environment separation follows the [ProjectReal environment reference](https://docs.projectreal.gg/en/reference/environment/),
+and its [Drawing API reference](https://docs.projectreal.gg/en/reference/drawing/).
 
 Example generic execution pattern:
 
