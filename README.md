@@ -3,16 +3,16 @@
 
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.7.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.7.1-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
 
 ## Overview
 
-Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. Version 2.7.0 introduces standalone Free Flight with gliding and air-dashes, robust skill compatibility, flexible ESP rendering, runtime monitoring, and complete resource cleanup.
+Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. Version 2.7.1 improves fruit F flight speed, M1/Skill Rush boosts, and transitions between Free Flight and skills.
 
-This project is maintained as a modular Luau script with a dedicated UI, entity tracking, and a configuration system. The latest version in the source tree is `v2.7.0`.
+The latest release is `v2.7.1`.
 
 ---
 
@@ -23,7 +23,8 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 | `K` | Toggle UI | Opens or hides the main interface. |
 | `G` | Combat toggle | Enables or disables the active combat/aiming system. |
 | `B` | Aim Lock | Pins the current target so it stays locked while fighting. |
-| `Space` / `Q` | Free Flight (when enabled) | Hold Space while airborne to fly, hold Q+Space to glide, tap Q for a 0.2-second dash with a 0.4-second total cooldown; dashing while moving doubles the configured Q dash speed. |
+| `Space` / `Q` | Free Flight (when enabled) | Hold Space while airborne to fly, tap Space while flying to cancel flight, hold Q+Space to glide, tap Q for a 0.2-second dash with a 0.4-second total cooldown; dashing while moving doubles the configured Q dash speed. |
+| `H` | Lock Flight (Ground Lock) | Toggle ground-landing lock on/off (prevents flight/glide from canceling when touching ground or obstacles). |
 | Right Mouse (`M2`) | Camera aim | Smoothly tracks the current target with camera aimbot behavior. |
 
 ---
@@ -39,15 +40,15 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 
 ### Movement & Mobility
 - Configurable speed and flight modifiers with a maximum flight-speed cap.
-- Flight boost start duration (1–3 seconds), peak multiplier (×2–5), and temporary cap multiplier (×2–3) are adjustable from the Movement tab.
-- M1/skill rush movement modifiers.
+- Flight boost duration, peak multiplier, temporary cap multiplier, and maximum flight speed are adjustable from the Movement tab.
+- M1 Rush and Skill Rush toggles and speed multipliers are available in the Movement tab.
 - Custom dash, flashstep, and Geppo/sky-jump controls.
-- Optional free-flight/glide mode with camera steering, adjustable flight/glide/dash speeds, and Angel-style idle/movement animation tracks; its movement forces yield while a skill is active.
+- Optional Free Flight and glide modes with camera steering, adjustable flight/glide/dash speeds, and Angel-style flight animations. Free Flight remains steerable while a skill is held, yields after release until the cast ends, and yields immediately to fruit F flight.
 - Infinite jump and custom jump power options.
 - Transformation-aware movement adjustments and water walking.
 
 ### Visuals / ESP
-- Selectable Drawing API or ScreenGui rendering backends, with pooled ESP objects.
+- ESP display options for supported drawing and on-screen GUI modes.
 - Player, monster, ally/shadow, and sea-beast rendering options.
 - Distance, level, display-name, tracer, box, and target-indicator options.
 - Clear map fog and visual shake cleanup.
@@ -57,7 +58,7 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 ### Player Utilities
 - Attack speed boosts and gun fire speed modifications.
 - Anti-stun and unbreakable armor behavior.
-- Observation Haki-related features and safe utility hooks.
+- Observation Haki-related features and utility options.
 - Faction switching and combat quality-of-life automation.
 
 ### World / Server Tools
@@ -69,16 +70,15 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 - Live script/game uptime, FPS, ping, and memory monitoring.
 - Anti-kick and anti-AFK protective logic.
 - Configuration save/load flow with UI-based management.
-- Centralized cleanup for hooks, tasks, connections, entity tracking, and render pools.
-- Optional executor API lookup with environment fallbacks; unsupported APIs are not emulated.
+- Automatic cleanup of temporary effects and movement state.
 
-## Latest Update Summary (v2.7.0)
+## Latest Update Summary (v2.7.1)
 
-- Added standalone Free Flight mode with camera steering, Q-Dash, Space-hold controls, and glide mode.
-- Fixed 3D tumbling/flipping issues when casting skills with `BodyVelocity` in mid-air by actively maintaining upright gyro stability.
-- Fixed face-direction locking when using skills during flight by auto-cleaning residual skill `BodyGyro` and `AlignOrientation` objects.
-- Improved idle hover behavior so the character remains completely stable and doesn't auto-rotate with the camera when stationary.
-- Enhanced BodyMover cleanup and lifecycle protection for seamless skill transitions in mid-air.
+- Fruit F flight speed boost now applies while holding F; the additional acceleration ramp begins when F is released.
+- Improved M1 Rush and Skill Rush speed boosts during movement skills.
+- Reduced unexpected speed changes after skills end or weapons are unequipped.
+- Free Flight remains steerable while a skill is held, then yields after release until the cast ends; fruit F flight takes control over Free Flight.
+- Fixed flight/skill transitions that could leave the character rigid or facing incorrectly.
 
 ---
 
@@ -87,16 +87,6 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 1. Open a Roblox executor that supports Luau or script injection.
 2. Open the UI with the configured keybind (`K` by default).
 3. Enable the desired features from the tabs and tune them to your preference.
-
-### Executor API lookup
-
-`src/core/Executor.luau` resolves optional APIs from `getgenv()` first, then
-the current script environment and `getrenv()`. It only discovers APIs supplied
-by the executor; it does not emulate them. For example, `gethui` is optional
-and the ESP UI falls back to `CoreGui` or `PlayerGui` when it is unavailable.
-
-The environment separation follows the [ProjectReal environment reference](https://docs.projectreal.gg/en/reference/environment/),
-and its [Drawing API reference](https://docs.projectreal.gg/en/reference/drawing/).
 
 Example generic execution pattern:
 
