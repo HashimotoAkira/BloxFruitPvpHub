@@ -1,9 +1,14 @@
 # Changelog
 
-## [2.7.0]
+## [2.7.1]
 
-### Added
-- Added standalone Free Flight mode with camera-directed flight, Q-Dash, Space-hold activation, and Space+Q glide mode.
-- Added customizable Free Flight Speed, Glide Speed, and Q Dash Speed sliders in the Movement tab.
-- Added Angel-style custom movement and idle flight animation tracks with speed adaptation based on movement velocity.
-- Added automatic ground-detection raycasting and landing grace periods for seamless flight transitions.
+### [Changed]
+- Flight Speed Mod now applies to fruit F flight while the skill is being held. The extra acceleration ramp starts when the key is released.
+- Free Flight yields to fruit F flight instead of competing with its movement.
+
+### [Fixed]
+- Fixed fruit F flight not receiving the configured speed boost in some cases.
+- Fixed unexpected speed increases after a skill ends or a weapon is unequipped.
+- Fixed M1 Rush and Skill Rush speed modifiers not applying consistently during movement skills.
+- Fixed Free Flight control and fruit F flight interfering with each other.
+- Fixed the character remaining rigid or incorrectly oriented after a flight or skill transition.
