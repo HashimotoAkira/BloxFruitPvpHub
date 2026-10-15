@@ -3,16 +3,16 @@
 
 # Blox Fruits Combat Hub - Pro Edition
 
-![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.7.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 ---
 
 ## Overview
 
-Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. Version 2.6.0 focuses on broader movement controls, flexible ESP rendering, runtime monitoring, and more complete resource cleanup.
+Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. Version 2.7.0 introduces standalone Free Flight with gliding and air-dashes, robust skill compatibility, flexible ESP rendering, runtime monitoring, and complete resource cleanup.
 
-This project is maintained as a modular Luau script with a dedicated UI, entity tracking, and a configuration system. The latest version in the source tree is `v2.6.0`.
+This project is maintained as a modular Luau script with a dedicated UI, entity tracking, and a configuration system. The latest version in the source tree is `v2.7.0`.
 
 ---
 
@@ -23,6 +23,7 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 | `K` | Toggle UI | Opens or hides the main interface. |
 | `G` | Combat toggle | Enables or disables the active combat/aiming system. |
 | `B` | Aim Lock | Pins the current target so it stays locked while fighting. |
+| `Space` / `Q` | Free Flight (when enabled) | Hold Space while airborne to fly, hold Q+Space to glide, tap Q for a 0.2-second dash with a 0.4-second total cooldown; dashing while moving doubles the configured Q dash speed. |
 | Right Mouse (`M2`) | Camera aim | Smoothly tracks the current target with camera aimbot behavior. |
 
 ---
@@ -38,8 +39,10 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 
 ### Movement & Mobility
 - Configurable speed and flight modifiers with a maximum flight-speed cap.
+- Flight boost start duration (1–3 seconds), peak multiplier (×2–5), and temporary cap multiplier (×2–3) are adjustable from the Movement tab.
 - M1/skill rush movement modifiers.
 - Custom dash, flashstep, and Geppo/sky-jump controls.
+- Optional free-flight/glide mode with camera steering, adjustable flight/glide/dash speeds, and Angel-style idle/movement animation tracks; its movement forces yield while a skill is active.
 - Infinite jump and custom jump power options.
 - Transformation-aware movement adjustments and water walking.
 
@@ -69,13 +72,13 @@ This project is maintained as a modular Luau script with a dedicated UI, entity 
 - Centralized cleanup for hooks, tasks, connections, entity tracking, and render pools.
 - Optional executor API lookup with environment fallbacks; unsupported APIs are not emulated.
 
-## Latest Update Summary (v2.6.0)
+## Latest Update Summary (v2.7.0)
 
-- Expanded the modular entity-tracking flow for players, monsters, boats, and sea beasts.
-- Added more configurable movement controls, including M1/skill rush modifiers and separate dash, flashstep, and Geppo options.
-- Improved ESP backend selection and object reuse for Drawing API and ScreenGui rendering.
-- Added live runtime monitoring and expanded server-browser sorting, filtering, and travel handling.
-- Strengthened lifecycle cleanup for hooks, tasks, connections, and render resources.
+- Added standalone Free Flight mode with camera steering, Q-Dash, Space-hold controls, and glide mode.
+- Fixed 3D tumbling/flipping issues when casting skills with `BodyVelocity` in mid-air by actively maintaining upright gyro stability.
+- Fixed face-direction locking when using skills during flight by auto-cleaning residual skill `BodyGyro` and `AlignOrientation` objects.
+- Improved idle hover behavior so the character remains completely stable and doesn't auto-rotate with the camera when stationary.
+- Enhanced BodyMover cleanup and lifecycle protection for seamless skill transitions in mid-air.
 
 ---
 
