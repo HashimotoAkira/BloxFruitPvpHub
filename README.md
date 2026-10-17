@@ -53,7 +53,7 @@ Execute the loader in any supported executor:
 
 ```lua
 getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "Marines"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/BloxFruitPvpHub/main/BloxFruitPvpLoader"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/BloxFruitPvpHub/main/BloxFruitPvpLoader.luau"))()
 ```
 
 ---
