@@ -1,104 +1,63 @@
-
----
-
 # Blox Fruits Combat Hub - Pro Edition
 
 ![Version](https://img.shields.io/badge/version-2.7.1-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
----
-
-## Overview
-
-Blox Fruits Combat Hub - Pro Edition is a feature-rich utility script for Blox Fruits built around a fast targeting system, movement enhancements, ESP, and quality-of-life automation. Version 2.7.1 improves fruit F flight speed, M1/Skill Rush boosts, and transitions between Free Flight and skills.
-
-The latest release is `v2.7.1`.
+A high-performance utility hub for Blox Fruits designed for fluid PvP combat, aerial mobility, and clean visual enhancements.
 
 ---
 
 ## Key Controls
 
 | Key | Action | Description |
-| :--- | :--- | :--- |
-| `K` | Toggle UI | Opens or hides the main interface. |
-| `G` | Combat toggle | Enables or disables the active combat/aiming system. |
-| `B` | Aim Lock | Pins the current target so it stays locked while fighting. |
-| `Space` / `Q` | Free Flight (when enabled) | Hold Space while airborne to fly, tap Space while flying to cancel flight, hold Q+Space to glide, tap Q for a 0.2-second dash with a 0.4-second total cooldown; dashing while moving doubles the configured Q dash speed. |
-| `H` | Lock Flight (Ground Lock) | Toggle ground-landing lock on/off (prevents flight/glide from canceling when touching ground or obstacles). |
-| Right Mouse (`M2`) | Camera aim | Smoothly tracks the current target with camera aimbot behavior. |
+| :---: | :--- | :--- |
+| **`K`** | Toggle UI | Show or hide the main interface. |
+| **`G`** | Combat Toggle | Enable or disable combat targeting & silent aim. |
+| **`B`** | Aim Lock | Lock onto your current target during battle. |
+| **`Space`** | Free Flight | **Hold in air** to fly; **tap** while flying to cancel. |
+| **`Q` + `Space`** | Angel Glide | Hold together for winged gliding mode. |
+| **`Q`** | Aerial Dash | Quick dash in flight direction (speed doubles while moving). |
+| **`H`** | Ground Lock | Prevents flight from canceling when near the ground or obstacles. |
+| **`M2`** (Right Click) | Camera Aim | Smoothly tracks locked target with camera aim. |
 
 ---
 
-## Main Features
+## Features
 
-### Combat
-- Silent Aim and camera aim support for players, monsters, and supported sea-event targets.
-- FOV circle, target filter controls, and priority settings.
-- Target selection by low health, monster priority, and distance-to-character logic.
-- Tracks players, monsters, boats, and sea beasts/Leviathans for targeting and ESP.
-- Aim lock key and configurable max aim distance.
+### ⚔️ Combat
+- **Silent Aim & Camera Aim**: Supports players, bosses, sea beasts, and Leviathans with FOV circle and priority filters.
+- **Target Routing**: Smart selection based on lowest health, distance, or entity type.
+- **Aim Lock**: Keeps your target locked even during fast-paced aerial fights.
 
-### Movement & Mobility
-- Configurable speed and flight modifiers with a maximum flight-speed cap.
-- Flight boost duration, peak multiplier, temporary cap multiplier, and maximum flight speed are adjustable from the Movement tab.
-- M1 Rush and Skill Rush toggles and speed multipliers are available in the Movement tab.
-- Custom dash, flashstep, and Geppo/sky-jump controls.
-- Optional Free Flight and glide modes with camera steering, adjustable flight/glide/dash speeds, and Angel-style flight animations. Free Flight remains steerable while a skill is held, yields after release until the cast ends, and yields immediately to fruit F flight.
-- Infinite jump and custom jump power options.
-- Transformation-aware movement adjustments and water walking.
+### 🕊️ Movement & Free Flight
+- **Free Flight & Gliding**: Full 3D camera-directed flight with customizable speeds and Angel V4 style gliding.
+- **Mid-air Skill Maneuvering**: Fly freely while holding skills without losing altitude or momentum.
+- **Skill & M1 Rush Speed**: Accelerate your melee dashes and skill dashes for rapid gap closing.
+- **Extra Mobility**: Infinite jump, custom dash distance, air flashstep, Geppo modifications, and water walking.
 
-### Visuals / ESP
-- ESP display options for supported drawing and on-screen GUI modes.
-- Player, monster, ally/shadow, and sea-beast rendering options.
-- Distance, level, display-name, tracer, box, and target-indicator options.
-- Clear map fog and visual shake cleanup.
-- Customizable tracer origin and range.
-- Infinite zoom support.
+### 👁️ Visuals & ESP
+- **Entity ESP**: Customizable boxes, tracers, names, levels, and distance for players, monsters, and sea events.
+- **Visual Optimizations**: Removes map fog, screen shake, and visual clutter for clean tracking.
+- **Infinite Camera Zoom**: Zoom out as far as needed for wide-angle battlefield awareness.
 
-### Player Utilities
-- Attack speed boosts and gun fire speed modifications.
-- Anti-stun and unbreakable armor behavior.
-- Observation Haki-related features and utility options.
-- Faction switching and combat quality-of-life automation.
-
-### World / Server Tools
-- Server browser enhancements with player/bounty sorting, bounty filtering, refresh, and travel controls.
-- Auto team selection and manual faction switching.
-- Layout support for desktop and mobile UI contexts.
-
-### Performance & Safety
-- Live script/game uptime, FPS, ping, and memory monitoring.
-- Anti-kick and anti-AFK protective logic.
-- Configuration save/load flow with UI-based management.
-- Automatic cleanup of temporary effects and movement state.
-
-## Latest Update Summary (v2.7.1)
-
-- Fruit F flight speed boost now applies while holding F; the additional acceleration ramp begins when F is released.
-- Improved M1 Rush and Skill Rush speed boosts during movement skills.
-- Reduced unexpected speed changes after skills end or weapons are unequipped.
-- Free Flight remains steerable while a skill is held, then yields after release until the cast ends; fruit F flight takes control over Free Flight.
-- Fixed flight/skill transitions that could leave the character rigid or facing incorrectly.
+### 🛡️ Utility & Safety
+- **Anti-Stun**: Prevents movement lockups from enemy crowd control.
+- **Server Utilities**: Built-in server browser with bounty sorting, server hop, and auto team selection.
+- **Protection**: Anti-AFK keepalive and anti-kick protection.
 
 ---
 
-## Getting Started
+## Quick Start
 
-1. Open a Roblox executor that supports Luau or script injection.
-2. Open the UI with the configured keybind (`K` by default).
-3. Enable the desired features from the tabs and tune them to your preference.
-
-Example generic execution pattern:
+Execute the loader in any supported executor:
 
 ```lua
-getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "P" or "Marines" or "M"
+getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "Marines"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/BloxFruitPvpHub/main/BloxFruitPvpLoader"))()
 ```
-
-> Use the script only in a supported environment and on accounts you are allowed to play.
 
 ---
 
 ## Disclaimer
 
-This project is intended for educational and personal customization use. The author is not responsible for account penalties, executor issues, or misuse of automation tools in Roblox.
+This script is developed for educational and personal testing purposes. Please use responsibly.
