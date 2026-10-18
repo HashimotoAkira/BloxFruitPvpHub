@@ -7,7 +7,7 @@
 - Added a Home overview and live monitor for script/game uptime, memory, FPS, and ping.
 - Added an Appearance tab with built-in theme presets, custom background color, and window transparency.
 - Added an Auto Buso Haki control in the Player tab.
-- Added WindUI configuration controls for saving, loading, refreshing, and deleting configurations.
+- Added WindUI configuration controls for saving, loading, refreshing, deleting, and auto-loading a selected configuration.
 
 ### Changed
 - Reorganized Movement into focused groups for jump/Geppo/speed, Flashstep/water, dash/rush, fruit flight, and free flight.

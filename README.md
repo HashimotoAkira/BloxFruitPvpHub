@@ -17,7 +17,7 @@ This repository contains the **public release loader**. The editable source and 
 - **Utilities:** anti-AFK and capability-dependent anti-kick protection.
 - **Home monitor:** live script/game uptime, memory, FPS, and ping information.
 - **Appearance:** built-in themes, custom window background color, and transparent-window option.
-- **Configurations:** save, load, and delete settings using WindUI's configuration manager.
+- **Configurations:** save, load, delete, and auto-load a selected config using WindUI's configuration manager.
 
 Features that rely on executor APIs may be unavailable in executors that do not provide those APIs.
 
@@ -42,7 +42,7 @@ The interface can also be shown or hidden with **K** after it loads.
 
 ## Configuration Notes
 
-Version 3.0.0 uses WindUI's configuration format. Configurations created by the previous Fluent-based version are **not imported**; create and save new configurations from the **Configs** tab.
+Version 3.0.0 uses WindUI's configuration format. Configurations created by the previous Fluent-based version are **not imported**; create and save new configurations from the **Configs** tab, then select one and enable **Auto-load selected config** to restore it when the hub starts.
 
 ## Changelog
 
