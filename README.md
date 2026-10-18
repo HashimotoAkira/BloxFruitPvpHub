@@ -1,63 +1,53 @@
-# Blox Fruits Combat Hub - Pro Edition
+# Blox Fruits Combat Hub
 
-![Version](https://img.shields.io/badge/version-2.7.1-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
-A high-performance utility hub for Blox Fruits designed for fluid PvP combat, aerial mobility, and clean visual enhancements.
+A configurable Blox Fruits utility hub for combat, movement, visual information, and quality-of-life controls. Version 3.0.0 introduces a redesigned WindUI interface with searchable tabs and subtabs.
 
----
-
-## Key Controls
-
-| Key | Action | Description |
-| :---: | :--- | :--- |
-| **`K`** | Toggle UI | Show or hide the main interface. |
-| **`G`** | Combat Toggle | Enable or disable combat targeting & silent aim. |
-| **`B`** | Aim Lock | Lock onto your current target during battle. |
-| **`Space`** | Free Flight | **Hold in air** to fly; **tap** while flying to cancel. |
-| **`Q` + `Space`** | Angel Glide | Hold together for winged gliding mode. |
-| **`Q`** | Aerial Dash | Quick dash in flight direction (speed doubles while moving). |
-| **`H`** | Ground Lock | Prevents flight from canceling when near the ground or obstacles. |
-| **`M2`** (Right Click) | Camera Aim | Smoothly tracks locked target with camera aim. |
-
----
+This repository contains the **public release loader**. The editable source and build workspace are maintained separately.
 
 ## Features
 
-### ⚔️ Combat
-- **Silent Aim & Camera Aim**: Supports players, bosses, sea beasts, and Leviathans with FOV circle and priority filters.
-- **Target Routing**: Smart selection based on lowest health, distance, or entity type.
-- **Aim Lock**: Keeps your target locked even during fast-paced aerial fights.
+- **Combat:** configurable combat and aim hotkeys, silent aim, camera aim, FOV controls, target filters, and target priorities.
+- **Movement:** fruit flight, free flight and glide, speed controls, jump and Geppo adjustments, dash and rush tuning, Flashstep, and water walking.
+- **Visuals:** ESP for players, monsters, and sea events; configurable labels and tracers; environment options including fog clearing and extended camera zoom.
+- **Player:** attack speed options, anti-stun controls, Auto Buso Haki, Observation Haki options, and team switching.
+- **VFX:** fruit visual styles and custom gradients.
+- **Utilities:** anti-AFK and capability-dependent anti-kick protection.
+- **Home monitor:** live script/game uptime, memory, FPS, and ping information.
+- **Appearance:** built-in themes, custom window background color, and transparent-window option.
+- **Configurations:** save, load, and delete settings using WindUI's configuration manager.
 
-### 🕊️ Movement & Free Flight
-- **Free Flight & Gliding**: Full 3D camera-directed flight with customizable speeds and Angel V4 style gliding.
-- **Mid-air Skill Maneuvering**: Fly freely while holding skills without losing altitude or momentum.
-- **Skill & M1 Rush Speed**: Accelerate your melee dashes and skill dashes for rapid gap closing.
-- **Extra Mobility**: Infinite jump, custom dash distance, air flashstep, Geppo modifications, and water walking.
+Features that rely on executor APIs may be unavailable in executors that do not provide those APIs.
 
-### 👁️ Visuals & ESP
-- **Entity ESP**: Customizable boxes, tracers, names, levels, and distance for players, monsters, and sea events.
-- **Visual Optimizations**: Removes map fog, screen shake, and visual clutter for clean tracking.
-- **Infinite Camera Zoom**: Zoom out as far as needed for wide-angle battlefield awareness.
+## Controls
 
-### 🛡️ Utility & Safety
-- **Anti-Stun**: Prevents movement lockups from enemy crowd control.
-- **Server Utilities**: Built-in server browser with bounty sorting, server hop, and auto team selection.
-- **Protection**: Anti-AFK keepalive and anti-kick protection.
-
----
+| Key | Action |
+| :---: | :--- |
+| **`K`** | Toggle the interface. |
+| Combat and aim hotkeys | View or change them in the **Combat** tab. |
+| Movement controls | View the selected flight mode and its controls in **Movement**. |
 
 ## Quick Start
 
-Execute the loader in any supported executor:
+Run this in a supported Roblox executor:
 
 ```lua
-getgenv()["BFP_AutoTeam"] = "Pirates" -- "Pirates" or "Marines"
+getgenv()["BFP_AutoTeam"] = "Pirates" -- Optional: "Pirates" or "Marines"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HashimotoAkira/BloxFruitPvpHub/main/BloxFruitPvpLoader.luau"))()
 ```
 
----
+The interface can also be shown or hidden with **K** after it loads.
+
+## Configuration Notes
+
+Version 3.0.0 uses WindUI's configuration format. Configurations created by the previous Fluent-based version are **not imported**; create and save new configurations from the **Configs** tab.
+
+## Changelog
+
+See [Changelog.md](./Changelog.md) for release notes.
 
 ## Disclaimer
 
-This script is developed for educational and personal testing purposes. Please use responsibly.
+Use responsibly and in accordance with Roblox's terms and the game's rules. This project is provided as-is; executor compatibility and availability of individual features may vary.
