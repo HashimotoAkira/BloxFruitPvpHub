@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.1] - 2026-10-18
+
+### Fixed
+- Improved Free Flight's handoff to game skill BodyVelocity movers and return to BFP flight after the skill mover is no longer active.
+- Avoided clearing the character's assembly velocity when resuming flight after yielding to a skill.
+
 ## [3.0.0] - 2026-10-18
 
 ### Added

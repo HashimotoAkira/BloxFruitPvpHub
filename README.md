@@ -1,9 +1,9 @@
 # Blox Fruits Combat Hub
 
-![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
-A configurable Blox Fruits utility hub for combat, movement, visual information, and quality-of-life controls. Version 3.0.0 introduces a redesigned WindUI interface with searchable tabs and subtabs.
+A configurable Blox Fruits utility hub for combat, movement, visual information, and quality-of-life controls. Version 3.0.0 introduced a redesigned WindUI interface with searchable tabs and subtabs.
 
 This repository contains the **public release loader**. The editable source and build workspace are maintained separately.
 
@@ -42,7 +42,7 @@ The interface can also be shown or hidden with **K** after it loads.
 
 ## Configuration Notes
 
-Version 3.0.0 uses WindUI's configuration format. Configurations created by the previous Fluent-based version are **not imported**; create and save new configurations from the **Configs** tab, then select one and enable **Auto-load selected config** to restore it when the hub starts.
+Version 3.0.1 uses WindUI's configuration format. Configurations created by the previous Fluent-based version are **not imported**; create and save new configurations from the **Configs** tab, then select one and enable **Auto-load selected config** to restore it when the hub starts.
 
 ## Changelog
 
