@@ -1,6 +1,6 @@
 # Blox Fruits Combat Hub — Source and Build Workspace
 
-![Version](https://img.shields.io/badge/version-3.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-3.1.1-blue.svg)
 
 This repository is the editable source and build workspace for Blox Fruits Combat Hub. The public release loader is maintained in the separate **BloxFruitPvPHub** repository; keep its README and changelog in sync with this project's release notes.
 
